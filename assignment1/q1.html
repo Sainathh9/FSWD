@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        form {
+            width: 750px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #fafafa;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 5px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin: 7px 0;
+        }
+
+        .label {
+            width: 120px;
+            padding: 8px;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .name {
+            background: #e5f1fb;
+            color: #28628f;
+        }
+
+        .dob {
+            background: #e8f4d8;
+            color: #57802a;
+        }
+
+        .position {
+            background: #f7ead3;
+            color: #9a6b24;
+        }
+
+        .email {
+            background: #f8e5ed;
+            color: #9c3f61;
+        }
+
+        .state {
+            background: #f7e7e0;
+            color: #9b4c32;
+        }
+
+        .resume {
+            background: #dff3ed;
+            color: #147563;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            height: 38px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-right: 8px;
+        }
+
+        .name-input {
+            width: 195px;
+        }
+
+        .dob-input {
+            width: 295px;
+        }
+
+        .email-input {
+            width: 295px;
+        }
+
+        .mobile-input {
+            width: 295px;
+        }
+
+        select {
+            width: 295px;
+        }
+
+        input[type="radio"] {
+            margin-left: 5px;
+        }
+
+        input[type="file"] {
+            width: 295px;
+            height: 38px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            box-sizing: border-box;
+            margin-right: 8px;
+        }
+
+        .submit {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            padding: 9px 18px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            background: #fafafa;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+
+    <h3>Job application form</h3>
+
+    <div class="row">
+        <div class="label name">Applicant name</div>
+        <input class="name-input" type="text" placeholder="First name">
+        <input class="name-input" type="text" placeholder="Middle name">
+        <input class="name-input" type="text" placeholder="Last name">
+    </div>
+
+    <div class="row">
+        <div class="label dob">Date of birth</div>
+        <input class="dob-input" type="text" placeholder="dd-mm-yyyy">
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+    </div>
+
+    <div class="row">
+        <div class="label position">Position applied</div>
+        <input type="radio" name="position"> Developer
+        <input type="radio" name="position"> Tester
+        <input type="radio" name="position"> Designer
+        <input type="radio" name="experience"> Fresher
+        <input type="radio" name="experience"> Experienced
+    </div>
+
+    <div class="row">
+        <div class="label email">Email ID</div>
+        <input class="email-input" type="email" placeholder="Enter your email">
+        <input class="mobile-input" type="text" placeholder="Mobile no.">
+    </div>
+
+    <div class="row">
+        <div class="label state">State</div>
+        <select>
+            <option>Select any one</option>
+            <option>Telangana</option>
+            <option>Andhra Pradesh</option>
+            <option>Karnataka</option>
+            <option>Maharashtra</option>
+            <option>Tamil Nadu</option>
+        </select>
+
+        <select>
+            <option>Select city</option>
+            <option>Hyderabad</option>
+            <option>Vijayawada</option>
+            <option>Bangalore</option>
+            <option>Mumbai</option>
+            <option>Chennai</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="label resume">Upload resume</div>
+        <input type="file">
+        <input type="file">
+    </div>
+
+    <div class="submit">
+        <input type="submit" value="Submit">
+    </div>
+
+</form>
+
+</body>
+</html>

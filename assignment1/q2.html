@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Banking Registration</title>
+
+    <script>
+        function validate() {
+
+            let name = document.getElementById("name").value;
+            let account = document.getElementById("account").value;
+            let pan = document.getElementById("pan").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirm = document.getElementById("confirm").value;
+
+            if (!/^[A-Za-z ]+$/.test(name)) {
+                alert("Customer name should contain only alphabets and spaces");
+                return false;
+            }
+
+            if (!/^\d{12}$/.test(account)) {
+                alert("Account number should contain exactly 12 digits");
+                return false;
+            }
+
+            if (!/^[A-Z]{5}[0-9]{4}[A-Z]$/.test(pan)) {
+                alert("Invalid PAN number");
+                return false;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert("Invalid email");
+                return false;
+            }
+
+            if (password.length < 8) {
+                alert("Password must contain at least 8 characters");
+                return false;
+            }
+
+            if (password != confirm) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Registration successful");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<form onsubmit="return validate()">
+
+    Customer Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Account Number:
+    <input type="text" id="account">
+    <br><br>
+
+    PAN Number:
+    <input type="text" id="pan">
+    <br><br>
+
+    E-mail ID:
+    <input type="text" id="email">
+    <br><br>
+
+    Password:
+    <input type="password" id="password">
+    <br><br>
+
+    Confirm Password:
+    <input type="password" id="confirm">
+    <br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>

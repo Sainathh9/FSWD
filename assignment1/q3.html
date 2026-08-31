@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Eligibility</title>
+
+    <script>
+        function checkAttendance() {
+            let name = document.getElementById("name").value;
+            let attendance = document.getElementById("attendance").value;
+            let result = document.getElementById("result");
+
+            if (attendance < 75) {
+                result.innerHTML = "Sorry " + name + ", you are not eligible to appear for the examination.";
+            } else {
+                result.innerHTML = "Welcome " + name + ", you are eligible to appear for the examination.";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Examination Eligibility</h2>
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Attendance Percentage:
+    <input type="number" id="attendance">
+    <br><br>
+
+    <button onclick="checkAttendance()">Check Eligibility</button>
+
+    <p id="result"></p>
+
+</body>
+</html>
